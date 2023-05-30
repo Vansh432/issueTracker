@@ -34,7 +34,7 @@ function filterByTitleContent(value) {
 
      let ans = arr.map(function (x) {
           let text = x.childNodes[1].childNodes[1].childNodes[1].innerText;
-
+           text=text.trim();
           if (text.startsWith(value)) {
                return x;
           }
@@ -62,6 +62,7 @@ searchByAuthor.addEventListener('keyup', () => {
 function filterByAuthorContent(value) {
      let ans = arr.map(function (x) {
           let text = x.childNodes[1].childNodes[1].childNodes[3].innerText;
+           text=text.trim();
           if (text.startsWith(value)) {
                return x;
           }
