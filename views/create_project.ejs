@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=title%>
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body style="background-color: #144edf">
+    <%- include('_header')%>
+        <div id="formDetails">
+            <form action="/projectSet" method="post">
+                <div class="Input">
+                    <input type="text" name="projectname" placeholder="Project Name" required>
+                </div>
+                <div class="Input">
+
+                    <input type="text" name="author" placeholder="Author" required>
+                </div>
+                <div class="Input">
+                    <textarea name="description" id="desription" placeholder="Description.." required></textarea>
+                </div>
+                <input type="submit" value="Submit" style="cursior:pointer">
+            </form>
+        </div>
+</body>
+
+</html>

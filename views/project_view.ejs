@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=title%>
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/projectView.css">
+    <link rel="stylesheet" href="/css/createIssue.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+<body>
+    <%-include('_header1')%>
+
+        <div class="decription">
+            <h3 id="projectAuthor"><span>Author:</span>
+                <%=data.author%>
+            </h3>
+            <h4>Description:</h4>
+            <p id="projectDescriptions">
+                <%=data.description%>
+            </p>
+        </div>
+
+        <div class="issueContainer">
+            <h2>ISSUES</h2>
+            <main>
+                <div id="issueHeader">
+                    <input type="text" name="issuetitle" id="issuetitle" placeholder="search by title">
+                    <div class="optionLabels">
+                        <div id="labelHeading">
+                            <h4>Labels</h4>
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </div>
+                        <ul id="labelList" class="listFilter">
+
+                            <li>
+                                <input type="checkbox" id="bug" name="labelissue" value="bug" class="checkbox">
+                                <span>bug</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="document" name="labelissue" value="document"
+                                    class="checkbox">
+                                <span>document</span>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" id="dependencies" name="labelissue" value="dependencies"
+                                    class="checkbox">
+                                <span>dependencies</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="build" name="labelissue" value="build" class="checkbox">
+                                <span>build</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="optionLabels">
+                        <input type="text" id="searchByAuthor" placeholder="author">
+                    </div>
+                    <div id="newIssue">
+                        <a href="/create_issue"> New issue</a>
+                    </div>
+                </div>
+
+
+                <div class="issuesContent">
+                    <% for(let i of issuedata){%>
+                        <div href="" class="issueLink">
+                            <li class="issue">
+                                <div class="issuedetails">
+                                    <h2 class="issueTitle">
+                                        <%=i.titleissue%>
+                                    </h2>
+                                    <p>
+                                        <%=i.authorissue%>
+                                    </p>
+                                </div>
+                                <div class="labels">
+                                    <% let labels=i.labelissue%>
+                                        <% for(let j of labels){%>
+                                            <span class="labelsName">
+                                                <%=j%>
+                                            </span>
+                                            <%}%>
+
+                                </div>
+                                <a class="deleteIssue" href="/delete_issue/?id=<%=i._id%>">
+                                    <ion-icon name="trash-outline"></ion-icon>
+                                </a>
+                            </li>
+
+                        </div>
+                        <%}%>
+                </div>
+
+            </main>
+        </div>
+        <script src="/script/projectView.js"></script>
+</body>
+
+</html>

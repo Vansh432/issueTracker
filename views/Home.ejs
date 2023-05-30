@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=title%>
+    </title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+</head>
+
+<body>
+    <header>
+        <%- include('_header')%>
+            <nav>
+                <ul>
+                    <a href="/">
+                        <li>Home</li>
+                    </a>
+                    <a href="/create_project">
+                        <li title="create a project" id="addproject"><ion-icon name="add-outline"></ion-icon> </li>
+                    </a>
+                </ul>
+            </nav>
+    </header>
+
+    <div class="listProject">
+        <% for(let i of projectlist){ %>
+            <a href="/projectview/?id=<%=i._id%>">
+                <li>
+                    <h2 class="Project Name">
+                        <%=i.projectname%>
+                    </h2>
+                    <h3 class="Author">
+                        <%=i.author%>
+                    </h3>
+                </li>
+            </a>
+            <%}%>
+    </div>
+</body>
+
+</html>

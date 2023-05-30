@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=title%>
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/projectView.css">
+    <link rel="stylesheet" href="/css/createIssue.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+<body>
+    <!--Create issue page-->
+    <%-include('_header1')%>
+        <div class="createIssueContainer">
+            <form action="/new_issue_created" method="post">
+                <div class="issueHeader">
+                    <input type="text" placeholder="Title" name="titleissue" id="titleissue" required>
+                    <div class="optionLabels">
+                        <div id="labelHeading">
+                            <h4>Labels</h4>
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </div>
+                        <ul id="labelList" class="listFilter">
+                            <li>
+                                <input type="checkbox" id="bug" name="labelissue" value="bug" class="checkbox">
+                                <span>Bug</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="document" name="labelissue" value="document"
+                                    class="checkbox"><span>document</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="dependencies" name="labelissue" value="dependencies"
+                                    class="checkbox"><span>dependencies</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="build" name="labelissue" value="build"
+                                    class="checkbox"><span>build</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <input type="text" placeholder="author" name="authorissue" required>
+                </div>
+                <textarea name="descriptionissue" id="" cols="30" rows="10" placeholder="description..."
+                    required></textarea>
+                <br>
+                <input type="submit" value="Submit new issue" id="submitIssue">
+            </form>
+        </div>
+        <script src="/script/creatIssue.js"></script>
+</body>
+
+</html>

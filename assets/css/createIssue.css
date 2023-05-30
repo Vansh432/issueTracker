@@ -1,0 +1,96 @@
+.createIssueContainer {
+
+    width: fit-content;
+    margin: 40px auto;
+    padding: 10px;
+    box-shadow: 0px 0px 7px #959595;
+    border-radius: 10px;
+}
+
+.createIssueContainer form {
+    background-color: black;
+    text-align: right;
+}
+
+.createIssueContainer form .issueHeader {
+    display: flex;
+    align-items: center;
+}
+
+.createIssueContainer form .issueHeader input {
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    margin-left: 20px;
+    background-color: #242424;
+    color: #fff;
+    outline: none;
+    border: none;
+}
+
+form .issueHeader #titleissue {
+    width: 450px;
+    margin: 0px;
+}
+
+.createIssueContainer form textarea {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    margin-left: 20px;
+    background-color: #242424;
+    color: #fff;
+    outline: none;
+    margin: 30px 0px;
+    border: none;
+}
+
+.createIssueContainer form #submitIssue {
+    width: 160px;
+    height: 40px;
+    color: #fff;
+    background-color: rgb(4, 205, 21);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: 0.4s;
+}
+
+form #submitIssue:hover {
+    background-color: rgb(7, 97, 14);
+}
+
+.listFilter {
+    width: 100%;
+}
+
+.listFilter li {
+    background-color: rgb(30, 30, 30);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: .9rem;
+    box-shadow: 0px 0px 10px rgba(37, 37, 37, 0.8);
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.createIssueContainer form .issueHeader .listFilter input {
+    border: none;
+    outline: none;
+    width: 15px;
+    height: 15px;
+    margin: 3px;
+    background-color: red;
+}
+
+.createIssueContainer form .issueHeader .listFilter input[type="checkbox"]:checked {
+    accent-color: rgb(30, 30, 30);
+}

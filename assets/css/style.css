@@ -1,0 +1,133 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: rgba(235, 233, 233, 0.3);
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header {
+    background-color: #144edf;
+    padding: 0px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    font-size: 1.2rem;
+    list-style: none;
+    margin: 0px 10px;
+    padding: 8px 30px;
+    background-color: #5580E9;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+
+}
+
+nav ul a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul #addproject {
+    background-color: transparent;
+    transition: 0.4s;
+}
+
+ul #addproject:hover {
+    background-color: #5580E9;
+}
+
+div h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    background-color: #144edf;
+    height: 150px;
+    line-height: 120px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#formDetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#formDetails form {
+    background-color: #fff;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', sans-serif;
+    ;
+}
+
+#formDetails form input {
+    min-width: 450px;
+    height: 40px;
+    font-size: 1rem;
+    padding: 0px 5px;
+}
+
+.Input {
+    margin: 10px 0px;
+}
+
+#formDetails form textarea {
+    min-width: 450px;
+    height: 200px;
+    padding: 2px 5px;
+    font-size: 1rem;
+}
+
+.listProject {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.listProject li {
+    list-style: none;
+    height: 110px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.listProject li:hover {
+    background-color: #dddddd;
+}
+
+.listProject a {
+    list-style: none;
+    color: #000000;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+}
+
+.listProject li h2 {
+    margin: 15px 0px;
+    font-size: 1.6rem;
+}
