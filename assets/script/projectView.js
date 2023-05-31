@@ -2,6 +2,7 @@ console.log("hello");
 // label list -->
 let heading = document.getElementById('labelHeading');
 let labelList = document.getElementById('labelList');
+//when user click on label heading line no 26 in project_view.ejs files toggle class -->
 heading.addEventListener('click', () => {
      labelList.classList.toggle('active');
 })
@@ -31,10 +32,11 @@ issuetitle.addEventListener('keyup', () => {
 
 //filter content-->
 function filterByTitleContent(value) {
-
+     
      let ans = arr.map(function (x) {
           let text = x.childNodes[1].childNodes[1].childNodes[1].innerText;
-           text=text.trim();
+          text=text.trim();
+     
           if (text.startsWith(value)) {
                return x;
           }
@@ -59,10 +61,11 @@ searchByAuthor.addEventListener('keyup', () => {
      filterByAuthorContent(searchByAuthor.value);
 })
 
+//filter issues by author-->
 function filterByAuthorContent(value) {
      let ans = arr.map(function (x) {
           let text = x.childNodes[1].childNodes[1].childNodes[3].innerText;
-           text=text.trim();
+          text=text.trim();
           if (text.startsWith(value)) {
                return x;
           }
@@ -102,15 +105,17 @@ Li.forEach(Element => {
      })
 });
 
-
+//check if there are any checked bugs
 function checkAnyChecked() {
      for (let i of checkbox) {
           if (i.checked) return false;
      }
      return true;
 }
+
+//check box-->
 let checkbox = document.querySelectorAll('.checkbox');
-let labels = new Set();
+let labels = new Set();//create storing labels
 function showContent() {
      for (let i of checkbox) {
           if (i.checked) {
@@ -123,7 +128,7 @@ function showContent() {
 
      filterByLabelsContent(arr);
 }
-
+//filter the issue by selecing labels-->
 function filterByLabelsContent(labelsArray) {
      ;
      let filterArray = [];
