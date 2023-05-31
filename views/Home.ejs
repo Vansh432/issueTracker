@@ -23,13 +23,14 @@
                     <a href="/">
                         <li>Home</li>
                     </a>
+                    <!--create project icon-->
                     <a href="/create_project">
                         <li title="create a project" id="addproject"><ion-icon name="add-outline"></ion-icon> </li>
                     </a>
                 </ul>
             </nav>
     </header>
-
+    <!--it shows the all projects -->
     <div class="listProject">
         <% for(let i of projectlist){ %>
             <a href="/projectview/?id=<%=i._id%>">
