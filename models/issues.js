@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+//issues schema
 const issue_schema = new mongoose.Schema({
     titleissue: {
         type: "string",
@@ -18,5 +18,5 @@ const issue_schema = new mongoose.Schema({
     }
 })
 
-const create_issue = mongoose.model('create_issue', issue_schema);
-module.exports = create_issue;
+const create_issue = mongoose.model('create_issue', issue_schema);//create mongoose model
+module.exports = create_issue;//exports create_issue module
