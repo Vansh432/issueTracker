@@ -8,16 +8,16 @@
     <title>
         <%=title%>
     </title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/projectView.css">
-    <link rel="stylesheet" href="/css/createIssue.css">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="/css/style.css"><!--main  css files-->
+    <link rel="stylesheet" href="/css/projectView.css"><!--Project view css-->
+    <link rel="stylesheet" href="/css/createIssue.css"><!--creat issue css-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script><!--ion-icon script-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 
 <body>
     <%-include('_header1')%>
-
+       <!--it projecr section like -author and description-->
         <div class="decription">
             <h3 id="projectAuthor"><span>Author:</span>
                 <%=data.author%>
@@ -27,13 +27,15 @@
                 <%=data.description%>
             </p>
         </div>
-
+        <!--issue container-->    
         <div class="issueContainer">
             <h2>ISSUES</h2>
             <main>
                 <div id="issueHeader">
+                    <!--seach by title-->
                     <input type="text" name="issuetitle" id="issuetitle" placeholder="search by title">
                     <div class="optionLabels">
+                <!--issue labels section-->
                         <div id="labelHeading">
                             <h4>Labels</h4>
                             <ion-icon name="chevron-down-outline"></ion-icon>
@@ -61,6 +63,7 @@
                             </li>
                         </ul>
                     </div>
+                    <!--author by -->
                     <div class="optionLabels">
                         <input type="text" id="searchByAuthor" placeholder="author">
                     </div>
@@ -68,8 +71,8 @@
                         <a href="/create_issue"> New issue</a>
                     </div>
                 </div>
-
-
+                
+               <!--it show all issues-->
                 <div class="issuesContent">
                     <% for(let i of issuedata){%>
                         <div href="" class="issueLink">
