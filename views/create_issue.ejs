@@ -18,10 +18,12 @@
 <body>
     <!--Create issue page-->
     <%-include('_header1')%>
+    <!--create issue Form-->
         <div class="createIssueContainer">
             <form action="/new_issue_created" method="post">
                 <div class="issueHeader">
-                    <input type="text" placeholder="Title" name="titleissue" id="titleissue" required>
+                    <input type="text" placeholder="Title" name="titleissue" id="titleissue" required><!--title of issue-->
+                    <!--it shows the labels -->
                     <div class="optionLabels">
                         <div id="labelHeading">
                             <h4>Labels</h4>
@@ -46,12 +48,12 @@
                             </li>
                         </ul>
                     </div>
-                    <input type="text" placeholder="author" name="authorissue" required>
+                    <input type="text" placeholder="author" name="authorissue" required><!--author name-->
                 </div>
                 <textarea name="descriptionissue" id="" cols="30" rows="10" placeholder="description..."
-                    required></textarea>
+                    required></textarea><!--descriptions  of issue-->
                 <br>
-                <input type="submit" value="Submit new issue" id="submitIssue">
+                <input type="submit" value="Submit new issue" id="submitIssue"><!--submit button-->
             </form>
         </div>
         <script src="/script/creatIssue.js"></script>
